@@ -3,7 +3,7 @@
 
 import pandas as pd
 import numpy as np
-import matplotlib.pyplot as plt
+#import matplotlib.pyplot as plt
 import seaborn as sns
 import streamlit as st
 import plotly.express as px
@@ -47,10 +47,10 @@ st.table(preview)
 with visuals:
 	st.header('Checking the trend of postoperative stay for each surgery between 2019 and 2020')
 # time series plot for trend of post operative stays between 2019 and 2020 
-figure=plt.figure(figsize=(10,8))
+figure=px.figure(figsize=(10,8))
 sns.lineplot(x=df_poland['Date of surgery'], y=df_poland['Postoperative hospital stay'], hue=df_poland['Type of surgery'])
-plt.title("Trend of surgeries between 2019 and 2020",fontsize=15)
-plt.show()
+px.title("Trend of surgeries between 2019 and 2020",fontsize=15)
+px.show()
 st.pyplot(figure)
 
 # Bar plot to check  the frequency of total hospital days
