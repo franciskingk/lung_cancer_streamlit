@@ -30,7 +30,7 @@ st.caption('The objective of our study is to assess the duration of stay that tr
 st.caption('It will also assess the outcome of the cancer patients after discharge from the hospital following various treatment procedures.')
 # Loading the dataset
 st.header('A preview of the dataset.')
-url='/home/francis/Desktop/lung_cancer_project/Lung-Cancer-/Clean dataset.csv'
+url='Clean dataset.csv'
 #url2='https://drive.google.com/uc?id=' + url.split('/')[-2]
 df = pd.read_csv(url,index_col=0)
 df_poland =  df.copy()
